@@ -1,0 +1,128 @@
+body {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background-color: white;
+}
+* {
+  box-sizing: border-box
+}
+
+/* input fields for login/signup */
+input[type=text], input[type=password] {
+   width: 100%;
+   padding: 15px;
+   margin: 5px 0 22px 0;
+   display: inline-block;
+   border: none;
+   background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+   background-color: #ddd;
+   outline: none;
+}
+
+hr {
+   border: 1px solid #f1f1f1;
+   margin-bottom: 25px;
+}
+
+/* style for all buttons */
+button {
+   background-color: #04AA6D;
+   color: white;
+   padding: 14px 20px;
+   margin: 8px 0;
+   border: none;
+   cursor: pointer;
+   width: 100%;
+   opacity: 0.9;
+}
+
+button:hover {
+   opacity:1;
+}
+
+/* styles for cancel button */
+.cancelbtn {
+   background-image: url(http://localhost:1337/img/milkcat.jpeg);
+   background-size: contain;
+   padding: 14px 20px;
+   background-color: #f44336;
+}
+
+/* float buttons and make equal width */
+.cancelbtn, .signupbtn {
+   float: left;
+   width: 50%;
+}
+
+/* Add padding to container */
+.container {
+   padding: 16px;
+}
+
+/* Clear floats */
+.clearfix::after {
+   content: "";
+   clear: both;
+   display: table;
+}
+
+/* Header */
+.header {
+   padding: 5px;
+   font-size: 40px;
+   text-align: center;
+   background: rgb(153, 112, 0);
+}
+
+/* Left column */
+.leftcolumn {
+   float: left;
+   width: 75%;
+   text-align: center;
+}
+
+/* Right column */
+.rightcolumn {
+   float: right;
+   width: 30%;
+   top: 20.6%;
+   right: 0%;
+   position: absolute;
+   padding-left: 20px;
+}
+
+/* Cards/Posts for Feed */
+.card {
+   background-color: rgb(209, 209, 209);
+   text-align: left;
+   padding: 10px;
+   margin-top: 10px;
+   width: 100%;
+   float: none;
+}
+
+.cardcontent {
+   text-align: left;
+   width: 50%;
+   left: 0%;
+}
+
+.cardcontent > * {
+   width: 100%;
+}
+
+.row:after {
+   content: "";
+   display: table;
+   clear: both;
+}
+
+/* Footer of Main Page */
+.footer {
+   padding: 20px;
+   text-align: center;
+   background: rgb(209, 209, 209);
+   margin-top: 20px;
+}
