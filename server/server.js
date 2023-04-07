@@ -15,7 +15,10 @@ app.get('/login', function (req, res) {
 	res.sendFile('login.html', {root: './client/views'})
 })
 
-// Include the userRoutes module
-let userRoutes = require('../server/route/userRoutes')
+/* Include the userRoutes module (do for each object in RESTful stack),
+app.use adds your new routing module and makes all the routes you create in it
+-available on the '/api/user' url */
+let userRoutes = require('./route/userRoutes')
+app.use('api/user', userRoutes);
 
 app.listen(1337, () => console.log('gato listening on port 1337'));

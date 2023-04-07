@@ -6,10 +6,10 @@ console.log("[userController] initialized")
 let users = [];
 
 // creating users
-let christian = User.createUser("Christian", "Bauer");
-let hank = User.createUser("Hank", "Hill");
-let titan = User.createUser("Titan", "Warrior");
-let daquavious = User.createUser("Daquavious", "Bingleton");
+let christian = user.createUser("Christian", "Bauer");
+let hank = user.createUser("Hank", "Hill");
+let titan = user.createUser("Titan", "Warrior");
+let daquavious = user.createUser("Daquavious", "Bingleton");
 
 // adding the users to the array
 users.push(christian);
