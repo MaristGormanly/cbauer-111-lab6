@@ -1,6 +1,9 @@
 const express = require('express');
 const app = express();
 
+var bodyParser = require('body-parser')
+app.use(bodyParser.json({ type: 'application/json' }));
+
 app.use(express.static('./client/public'));
 
 app.get('/', function (req, res) {
@@ -17,8 +20,8 @@ app.get('/login', function (req, res) {
 
 /* Include the userRoutes module (do for each object in RESTful stack),
 app.use adds your new routing module and makes all the routes you create in it
--available on the '/api/user' url */
+available on the '/api/user' url */
 let userRoutes = require('./route/userRoutes')
-app.use('api/user', userRoutes);
+app.use('/api/user', userRoutes);
 
 app.listen(1337, () => console.log('gato listening on port 1337'));

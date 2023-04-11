@@ -26,7 +26,7 @@ exports.getUser = (req, res) => {
 
 // save a user by using POST method of the /api/user resource url
 exports.saveUser = (req, res) => {
-    let newUser = User.createUser(req.body.firstName, req.body.lastName);
+    let newUser = user.createUser(req.body.firstName, req.body.lastName);
     users.push(newUser);
     res.setHeader('Content-Type', 'application/json');
     res.send(users);
