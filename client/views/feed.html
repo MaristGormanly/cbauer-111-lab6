@@ -25,12 +25,18 @@
             		<button id="like">Like</button>
             		
 					<h2>Comments</h2>
-            		<textarea id='comments'></textarea>
+					<div id="comments-container"></div>
+					<form id="comment-form">
+						<textarea id='comment-input'></textarea>
+						<button type="submit">Submit</button>
+					</form>
             		
 					<h2>Character Count: </h2>
             		<input id='count' value='0' />
 				</div>
 				<script src="/js/countingCharacters.js"></script>
+				<script src="/js/addComments.js"></script>
+				
 			</div>
 		</div>
 	</div>
@@ -49,5 +55,5 @@
 		<p>Click here to <a href="http://localhost:1337/login">login</a>
 		</p>
 	</div>
-	</body>
+  </body>
 </html>

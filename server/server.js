@@ -24,4 +24,7 @@ available on the '/api/user' url */
 let userRoutes = require('./route/userRoutes')
 app.use('/api/user', userRoutes);
 
+let commentingRoute = require('./route/commentingRoute')
+app.use('/api/comment', commentingRoute);
+
 app.listen(1337, () => console.log('gato listening on port 1337'));

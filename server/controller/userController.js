@@ -1,4 +1,4 @@
-let user = require('../model/user')
+let user = require('../model/user');
 
 console.log("[userController] initialized")
 
