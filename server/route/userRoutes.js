@@ -12,13 +12,15 @@ var router = express.Router();
 list if a GET request is recieved on the /api/user resource url. Also calls the
 saveUser() function if a POST request is recieved on the same url */
 router.route('/')
-    .get((req, res) => {
+  .get((req, res) => {
     userController.getAllUsers(req, res);
-    })
-    .post((req, res) => {
+  })
+  .post((req, res) => {
     userController.saveUser(req, res);
-    }
-);
+  })
+  .put((req, res) => {
+    userController.updateUser(req, res);
+  });
 
 /* route to call the getUser() function when the client sends a GET request to the
 /api/user/:index resource url (:index being a # representign an index of the users
@@ -26,8 +28,16 @@ array for which we wish to query a user) */
 router.route('/:index')
     .get((req, res) => {
     userController.getUser(req, res);
-    }
-);
+    })
+    .patch((req, res) => {
+        userController.partialUpdateUser(req, res);
+    })
+    .delete((req, res) => {
+        userController.deleteUser(req, res);
+    })
+    .put((req, res) => {
+        userController.updateUser(req, res);
+    });
 
 /* adds the routes created in this file to exports so they're accessible 
 in the files that require (import) it */

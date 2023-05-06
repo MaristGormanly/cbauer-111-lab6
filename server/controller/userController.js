@@ -40,3 +40,33 @@ exports.getAllUsers = (req, res) => {
     res.send(users);
 }
 
+// Update a user by using PUT method of the /api/user/:index resource url
+exports.updateUser = (req, res) => {
+    const index = req.params.index;
+    users[index] = user.createUser(req.body.firstName, req.body.lastName);
+    res.setHeader('Content-Type', 'application/json');
+    res.send(users[index]);
+  }
+  
+  // Partially update a user by using PATCH method of the /api/user/:index resource url
+exports.partialUpdateUser = (req, res) => {
+    console.log('Request body:', req.body);
+    const index = req.params.index;
+    const { firstName, lastName } = req.body;
+    if (firstName) {
+      users[index].firstName = firstName;
+    }
+    if (lastName) {
+      users[index].lastName = lastName;
+    }
+    res.setHeader('Content-Type', 'application/json');
+    res.send(users[index]);
+  }
+  
+  // Delete a user by using DELETE method of the /api/user/:index resource url
+  exports.deleteUser = (req, res) => {
+    const index = req.params.index;
+    const deletedUser = users.splice(index, 1)[0];
+    res.setHeader('Content-Type', 'application/json');
+    res.send(deletedUser);
+  }
