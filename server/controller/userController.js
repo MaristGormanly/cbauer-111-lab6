@@ -64,7 +64,7 @@ exports.partialUpdateUser = (req, res) => {
   }
   
   // Delete a user by using DELETE method of the /api/user/:index resource url
-  exports.deleteUser = (req, res) => {
+exports.deleteUser = (req, res) => {
     const index = req.params.index;
     const deletedUser = users.splice(index, 1)[0];
     res.setHeader('Content-Type', 'application/json');
